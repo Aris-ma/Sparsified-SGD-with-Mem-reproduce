@@ -1,0 +1,29 @@
+name: sparsifiedSGD_1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - numpy=1.21
+  - scipy=1.7
+  - matplotlib=3.4
+  - pandas=1.3
+  - seaborn=0.11
+  - scikit-learn=0.24
+  - statsmodels=0.12
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - protobuf
+  - tensorboard
+  - click
+  - fiona
+  - geopandas
+  - shapely
+  - pyproj
+  - gdal
+  - rtree
+  - sqlalchemy
+  - pip:
+      - pysal
