@@ -36,7 +36,7 @@ with open(os.path.join(args.data, RCV1_NAME), 'rb') as f:
     X, y = pickle.load(f)
 
 reg = 1 / X.shape[0]
-clf = SGDClassifier(tol=1e-4, loss='log', penalty='l2', alpha=reg, fit_intercept=False)
+clf = SGDClassifier(tol=1e-4, loss='log_loss', penalty='l2', alpha=reg, fit_intercept=False)
 clf.fit(X, y)
 l = loss(clf, X, y, reg)
 print("loss: {}".format(l))
@@ -50,7 +50,7 @@ with open(os.path.join(args.data, EPSILON_NAME), 'rb') as f:
     X, y = pickle.load(f)
 
 reg = 1 / X.shape[0]
-clf = SGDClassifier(tol=1e-4, loss='log', penalty='l2', alpha=reg)
+clf = SGDClassifier(tol=1e-4, loss='log_loss', penalty='l2', alpha=reg)
 clf.fit(X, y)
 l = loss(clf, X, y, reg)
 print("loss: {}".format(l))
